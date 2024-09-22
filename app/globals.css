@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+   /* Laptop font size more than 1024px) */
+
+   --font-base: 1rem;          /* 16px */
+   --font-paragraph: 1.125rem; /* 18px */
+   --font-h1: 2.5rem;          /* 40px */
+   --font-h2: 1.875rem;        /* 30px */
+   --font-h3: 1.5rem;         /* 24px */
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
