@@ -70,10 +70,10 @@ function Social1() {
   return (
     <VStacks className="gap-3 ">
       <Base className="font-bold">संपर्क करा</Base>
-      <HStacks className="gap-3">
+      <HStacks className="gap-3 items-center ">
         {social1.map((item, index) => (
           <a href={item.link} target="_blank" key={index}>
-            <Image src={item.icon} alt={item.name} width={40} height={40} />
+            <Image src={item.icon} alt={item.name} width={24} height={24} />
           </a>
         ))}
       </HStacks>
@@ -88,7 +88,7 @@ function Social2() {
       <HStacks className="gap-3">
         {social2.map((item, index) => (
           <a href={item.link} target="_blank" key={index}>
-            <Image src={item.icon} alt={item.name} width={40} height={40} />
+            <Image src={item.icon} alt={item.name} width={24} height={24} />
           </a>
         ))}
       </HStacks>

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-montserrat)'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -28,12 +31,12 @@ const config: Config = {
         large:"50px"
       },
       animation: {
-        'scroll-left': 'scroll-left 30s linear infinite',
+        'scroll-left': 'scroll-left 80s linear infinite',
       },
       keyframes: {
         'scroll-left': {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-80%)' },
+          '100%': { transform: 'translateX(-90%)' },
         },
       },
     },

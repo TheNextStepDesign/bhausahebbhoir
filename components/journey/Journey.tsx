@@ -19,7 +19,7 @@ export default function Journey() {
             { transform: 'translateX(-80%)' }
           ],
           {
-            duration: 30000,
+            duration: 80000,
             iterations: Infinity
           }
         );
@@ -50,9 +50,11 @@ export default function Journey() {
             Political Journey
             </H2>
         </Body>
-        <div className='relative  w-[4100px]  h-[300px] overflow-hidden  group cursor-pointer'>
-        <div ref={scrollRef} className='absolute w-[4100px] h-[300px] animate-scroll-left group-hover:animate-none'>
-          <Image src={'/images/landing/jurney.png'} alt="journey" width={8100} height={300} className="w-[4100px] object-scale-down" />
+        <div className='relative  w-[12100px]  h-[300px] overflow-hidden  group cursor-pointer'>
+        <div ref={scrollRef} className='absolute w-[12100px] h-[300px] animate-scroll-left group-hover:animate-none flex fle-row'>
+          <Image src={'/images/landing/jurney.png'} alt="journey" width={4100} height={300} className="w-[4100px] object-scale-down" />
+          <Image src={'/images/landing/jurney.png'} alt="journey" width={4100} height={300} className="w-[4100px] object-scale-down" />
+          <Image src={'/images/landing/jurney.png'} alt="journey" width={4100} height={300} className="w-[4100px] object-scale-down" />
         </div>
       </div>
 

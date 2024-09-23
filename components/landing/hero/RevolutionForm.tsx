@@ -43,7 +43,7 @@ export function RevolutionForm() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline" size={'lg'}>join the revolution</Button>
+        <Button variant="outline" size={'lg'} className='p-0 shadow-xl' >join the revolution</Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="sm:max-w-[425px]">
         <AlertDialogHeader>
