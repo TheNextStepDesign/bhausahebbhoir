@@ -8,7 +8,7 @@ interface FontStylesProps {
 
 export function Large({ className, children }:FontStylesProps) {
   return (
-    <h1 className={cn('text-large font-semibold ', className)}>{children}</h1>
+    <h1 className={cn('text-[30px] md:text-large font-semibold ', className)}>{children}</h1>
   );
 }
 

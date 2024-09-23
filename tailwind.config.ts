@@ -24,7 +24,7 @@ const config: Config = {
         large:"50px"
       },
       animation: {
-        'scroll-left': 'scroll-left 20s linear infinite',
+        'scroll-left': 'scroll-left 30s linear infinite',
       },
       keyframes: {
         'scroll-left': {

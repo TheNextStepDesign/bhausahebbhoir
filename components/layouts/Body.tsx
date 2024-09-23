@@ -6,7 +6,7 @@ type BodyProps = {
 
 const Body = ({children}:BodyProps) => {
     return (
-    <div className='w-[90%] md:max-w-[1220px] m-auto py-10' >
+    <div className='w-[90%] md:max-w-[1220px] m-auto' >
         {children}
     </div>
     )

@@ -6,31 +6,31 @@ import Quote from "./Quote";
 
 export default function Hero() {
   return (
-    <div className="bg-[url('/images/landing/HERO.png')] bg-cover bg-center w-full h-screen relative" >
-        <div className="w-full h-full bg-brand opacity-60" >
+    <div className="bg-[url('/images/landing/HERO.png')] bg-cover bg-center w-full h-screen relative overflow-hidden" >
+        <div className="w-full h-full bg-brand opacity-50" >
 
 
         </div>
-        <div className="absolute left-0 top-0 w-full h-full flex justify-center items-center" >
+        <div className="absolute left-0 top-10 w-full md:w-[80%] h-full flex justify-center items-center " >
 
-          <Image src={'/images/landing/maharashtra.png'} alt="state-img" width={850} height={700} className="object-cover" />
-
-        </div>
-        <div className="absolute left-0 bottom-0 w-[80%] h-full flex justify-center items-end " >
-
-          <Image src={'/images/landing/bhausaheb-hero.png'} alt="bhausaheb-img" width={500} height={630} className="object-cover" />
+          <Image src={'/images/landing/maharashtra.png'} alt="state-img" width={650} height={600} className="object-cover" />
 
         </div>
+        <div className="absolute left-0 bottom-0 w-[75%] h-full flex justify-center items-end " >
 
-        <div className="absolute left-0 bottom-0 w-[95%] h-full flex justify-end items-center " >
+          <Image src={'/images/landing/bhausaheb-hero.png'} alt="bhausaheb-img" width={350} height={630} className="  object-cover" />
+
+        </div>
+
+        <div className="absolute left-0 bottom-10 md:bottom-0 w-[95%] h-full flex justify-end items-end md:justify-end md:items-center z-10" >
           <LinkStack/>
         </div>
 
-        <div className="absolute left-5 top-5 " >
+        <div className="absolute left-0 md:left-5 top-0 md:top-5 w-full h-full flex justify-center md:justify-start items-start" >
             <NamePlate/>
         </div>
 
-        <div className="absolute left-0 bottom-20 w-[90%] h-full flex justify-end items-end " >
+        <div className="absolute left-0 top-0 md:left-0  md:bottom-10 w-full md:w-[90%] h-[60%] md:h-full flex justify-center items-center md:justify-end md:items-end " >
 
           <Quote/>
 

@@ -3,7 +3,7 @@ import { Base } from '../typography/FontStyles'
 
 export default function Footer() {
   return (
-    <footer className='px-5 py-5 bg-brand text-white' >
+    <footer id='footer' className='px-5 py-5 bg-brand text-white' >
         <Base>
         © Bhausaheb Bhoir 2024. All rights reserved.
         </Base>
