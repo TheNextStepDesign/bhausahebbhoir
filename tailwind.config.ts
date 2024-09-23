@@ -14,6 +14,10 @@ const config: Config = {
         brand:"#00B5E3",
         accent:"#F2AE00",
         gray:"#D9D9D9",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
       },
       fontSize: {
         base: 'var(--font-base)',           // Default base: 16px

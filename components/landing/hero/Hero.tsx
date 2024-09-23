@@ -6,8 +6,8 @@ import Quote from "./Quote";
 
 export default function Hero() {
   return (
-    <div className="bg-[url('/images/landing/HERO.png')] bg-cover bg-center w-full h-screen relative overflow-hidden" >
-        <div className="w-full h-full bg-brand opacity-50" >
+    <div className="bg-[url('/images/landing/HERO.webp')] bg-cover bg-center w-full h-screen relative overflow-hidden" >
+        <div className="w-full h-full bg-black opacity-20" >
 
 
         </div>
