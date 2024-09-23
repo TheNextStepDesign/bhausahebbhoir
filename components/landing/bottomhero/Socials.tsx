@@ -37,12 +37,12 @@ const social2 = [
   {
     name: "facebook",
     icon: facebook,
-    link: "https://www.facebook.com/bhausahebbhoironline",
+    link: "https://www.facebook.com/bhausahebbhoirofficial",
   },
   {
     name: "insta",
     icon: insta,
-    link: "https://www.instagram.com/bhausahebbhoironline?igsh=MTU1ZmgwaXZwYXJtZw==",
+    link: "https://www.instagram.com/bhausahebbhoirofficial?igsh=azh4OW91NXdmdmc=",
   },
   {
     name: "youtube",
