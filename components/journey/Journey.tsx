@@ -47,14 +47,14 @@ export default function Journey() {
     <div className='py-10 overflow-hidden bg-gray text-brand' >
         <Body>
             <H2 className='mb-10' >
-            Political Journey
+              Political Journey
             </H2>
         </Body>
         <div className='relative  w-[12100px]  h-[300px] overflow-hidden  group cursor-pointer'>
         <div ref={scrollRef} className='absolute w-[12100px] h-[300px] animate-scroll-left group-hover:animate-none flex fle-row'>
-          <Image src={'/images/landing/jurney.png'} alt="journey" width={4100} height={300} className="w-[4100px] object-scale-down" />
-          <Image src={'/images/landing/jurney.png'} alt="journey" width={4100} height={300} className="w-[4100px] object-scale-down" />
-          <Image src={'/images/landing/jurney.png'} alt="journey" width={4100} height={300} className="w-[4100px] object-scale-down" />
+          <Image src={'/images/landing/jurney.svg'} alt="journey" width={4100} height={300} className="" />
+          <Image src={'/images/landing/jurney.svg'} alt="journey" width={4100} height={300} className="" />
+          <Image src={'/images/landing/jurney.svg'} alt="journey" width={4100} height={300} className="" />
         </div>
       </div>
 
