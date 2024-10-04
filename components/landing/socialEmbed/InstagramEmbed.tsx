@@ -2,6 +2,16 @@
 import React, { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void;
+      };
+    };
+  }
+}
+
 interface InstagramProfileEmbedProps {
   profileUrl: string;
 }
