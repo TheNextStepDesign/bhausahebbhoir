@@ -14,8 +14,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        brand:"#00B5E3",
-        accent:"#F2AE00",
+        brand:"#73448C",
+        accent:"#FFE100",
         gray:"#D9D9D9",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

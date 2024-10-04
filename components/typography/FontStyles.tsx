@@ -6,6 +6,7 @@ interface FontStylesProps {
   children: ReactNode;
 }
 
+
 export function Large({ className, children }:FontStylesProps) {
   return (
     <h1 className={cn('text-[30px] md:text-large font-semibold ', className)}>{children}</h1>

@@ -6,8 +6,8 @@ import location from "./icons/location.svg";
 import call from "./icons/call.svg";
 import x from "./icons/x.svg";
 import youtube from "./icons/youtube.svg";
-import { HStacks, VStacks } from "@/components/layouts/Stacks";
-import { Base } from "@/components/typography/FontStyles";
+import { HStacks, Stack, VStacks } from "@/components/layouts/Stacks";
+import { Base, H2, Paragraph } from "@/components/typography/FontStyles";
 import Image from "next/image";
 
 const social1 = [
@@ -58,17 +58,30 @@ const social2 = [
 
 export default function Socials() {
   return (
-    <div className="flex flex-col md:flex-row gap-5 md:w-[680px] md:mr-10 text-black py-5 md:py-0">
-      <Social1 />
-      <div className="w-full h-[1px] md:h-20  md:w-[2px]  bg-black"></div>
-      <Social2 />
+    <div className="flex flex-col md:flex-row  md:justify-between w-full gap-8  md:w-[720px] md:items-center  text-black py-5 md:py-10 px-5 md:px-0 ">
+      <Stack className="gap-5  md:justify-normal" >
+        <Social1 />
+        <div className=" h-[1px] md:h-20  md:w-[2px]  bg-black"></div>
+        <Social2 />
+      </Stack>
+
+      <div className="relative  " >
+        <Paragraph className="font-semibold text-brand   w-[260px]" >
+        मोरया गोसावीची भक्ती हाच माझा पक्ष;
+        चापेकरांची क्रांती हेच माझे लक्ष!
+        </Paragraph>
+
+        <div className="absolute -top-8 -left-8" >
+          <Image src={"/images/landing/quote.png"} alt="bhausaheb-img" width={50} height={50} className="object-cover" />
+        </div>
+      </div>
     </div>
   );
 }
 
 function Social1() {
   return (
-    <VStacks className="gap-3 ">
+    <VStacks className="gap-3  ">
       <Base className="font-bold">संपर्क करा</Base>
       <HStacks className="gap-3 items-center ">
         {social1.map((item, index) => (
@@ -83,8 +96,8 @@ function Social1() {
 
 function Social2() {
   return (
-    <VStacks className="gap-3">
-      <Base className="font-bold">सोशल मीडिया वर फॉलो करा</Base>
+    <VStacks className="gap-3 ">
+      <Base className="font-bold">सोशल मीडिया</Base>
       <HStacks className="gap-3">
         {social2.map((item, index) => (
           <a href={item.link} target="_blank" key={index}>

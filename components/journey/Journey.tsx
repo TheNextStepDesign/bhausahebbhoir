@@ -44,7 +44,7 @@ export default function Journey() {
   }, []);
 
   return (
-    <div className='py-10 overflow-hidden bg-gray text-brand' >
+    <div className='py-10 overflow-hidden  text-brand' >
         <Body>
             <H2 className='mb-10' >
               Political Journey

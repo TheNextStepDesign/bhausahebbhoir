@@ -10,13 +10,13 @@ export default function BottomHero() {
   return (
    <div className="relative bg-brand text-white" >
         
-            <div className="min-h-[400px] w-full  flex flex-col md:flex-row justify-start md:justify-end items-start md:items-center gap-5 px-5 py-5" >
+            <div className="min-h-[350px] w-full  flex flex-col md:flex-row justify-start md:justify-end items-start md:items-center gap-5 px-5 py-8" >
                 <div className="md:hidden " >
                 <Image src={'/images/landing/bhausaheb-bottom-hero.png'} alt="bhausaheb-img" width={235} height={350} className="object-cover" />
                 </div>
                 <Quote/>
             </div>
-            <div className="min-h-[100px] bg-gray w-full  flex justify-start md:justify-end items-center pl-5" >
+            <div className="min-h-[100px] bg-background w-full  flex justify-start md:justify-end items-center md:pl-5" >
                 <Socials/>
             </div>
     

@@ -5,36 +5,34 @@ import { useState } from "react";
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
+ 
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
+ 
 } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
-import { Label } from "@/components/ui/Label";
+
 import { Input, Textarea } from "@/components/ui/Input";
 
-export function ReportForm() {
+export function ContactForm() {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false)
   const [formData, setFormData] = useState({
     fullName: "",
-    mobileNo: "",
     email: "",
-    complaint: "",
+    message: "",
   });
-;
+
 
   const isFormValid = () => {
     return (
       formData.fullName.trim() !== "" &&
-      formData.mobileNo.trim() !== "" &&
       formData.email.trim() !== "" &&
-      formData.complaint.trim() !== ""
+      formData.message.trim() !== ""
     );
   };
 
@@ -50,38 +48,37 @@ export function ReportForm() {
     console.log("Form submitted:", formData);
     try {
       const result = await sendEmail({
-        subject: "New Complaint from Website",
+        subject: "New Massage from Website",
         text: "New complaint submitted", // This will be replaced by the emailBody in the sendEmail function
       });
       console.log("Email sent successfully:", result);
 
       // Handle success (e.g., show a success message)
-      setAlertMessage("Your complaint has been submitted successfully.");
+      setAlertMessage("Your massage has been submitted successfully.");
       setIsSuccess(true);
       setShowAlert(true);
 
       // Clear the form fields after successful submission
       setFormData({
         fullName: "",
-        mobileNo: "",
         email: "",
-        complaint: "",
+        message: "",
       });
     } catch (error) {
-      console.error("Failed to send email:", error);
+      console.error("Failed to send massage:", error);
       // Handle error (e.g., show an error message)
-      setAlertMessage("Failed to submit your complaint. Please try again.");
+      setAlertMessage("Failed to submit your massage. Please try again.");
       setIsSuccess(false);
       setShowAlert(true);
     }
   };
 
+  
   async function sendEmail(emailData: { subject: string; text: string }) {
     const emailBody = `
       Full Name: ${formData.fullName}
-      Mobile No: ${formData.mobileNo}
       Email: ${formData.email}
-      Complaint: ${formData.complaint}
+      Message: ${formData.message}
     `;
 
     const response = await fetch("/api/form1", {
@@ -96,29 +93,16 @@ export function ReportForm() {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to send email");
+      throw new Error("Failed to send massage");
     }
 
     return response.json();
   }
 
   return (
-    <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button variant="outline" size={"lg"}>
-          share your problem
-        </Button>
-      </AlertDialogTrigger>
-      <AlertDialogContent className="sm:max-w-[425px]">
-        <AlertDialogHeader>
-          <AlertDialogTitle>Register for Campaign</AlertDialogTitle>
-          <AlertDialogDescription>
-            We value your feedback! Please share any problems or complaints you
-            have noticed, and we'll address them promptly.
-          </AlertDialogDescription>
-        </AlertDialogHeader>
+    <div  >
         <form>
-          <div className="grid gap-4 py-4">
+          <div className="grid gap-4 py-1 text-black">
             <div className="grid grid-cols-1 items-center gap-4">
               {/* <Label htmlFor="fullName" className="text-right">
                 Full Name
@@ -129,23 +113,10 @@ export function ReportForm() {
                 value={formData.fullName}
                 onChange={handleInputChange}
                 className="col-span-3"
-                placeholder="Enter your Full Name here"
+                placeholder=" Full Name "
               />
             </div>
-            <div className="grid grid-cols-1 items-center gap-4">
-              {/* <Label htmlFor="mobileNo" className="text-right">
-                Mobile No.
-              </Label> */}
-              <Input
-                id="mobileNo"
-                name="mobileNo"
-                type="number"
-                value={formData.mobileNo}
-                onChange={handleInputChange}
-                className="col-span-3"
-                placeholder="Enter your Mobile No here"
-              />
-            </div>
+            
             <div className="grid grid-cols-1 items-center gap-4">
               {/* <Label htmlFor="email" className="text-right">
                 Email
@@ -157,7 +128,7 @@ export function ReportForm() {
                 value={formData.email}
                 onChange={handleInputChange}
                 className="col-span-3"
-                placeholder="Enter your Email here"
+                placeholder=" Email "
               />
             </div>
             <div className="grid grid-cols-1 items-center gap-4">
@@ -165,31 +136,33 @@ export function ReportForm() {
                 Complaint
               </Label> */}
               <Textarea
-                id="complaint"
-                name="complaint"
-                value={formData.complaint}
+                id="message"
+                name="message"
+                value={formData.message}
                 onChange={handleInputChange}
-                className="col-span-3"
-                placeholder="Enter your complaint here"
+                className="col-span-3 text-black"
+                placeholder="message "
               />
             </div>
-          </div>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction
+            <div className="grid grid-cols-1 items-center gap-4">
+              {/* <Label htmlFor="complaint" className="text-right">
+                Complaint
+              </Label> */}
+              <Button
               type="button"
               className={`bg-blue-500 text-white`}
               onClick={handleSubmit}
               disabled={!isFormValid()}
             >
-              Submit Complaint
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </form>
-      </AlertDialogContent>
+              Send
+            </Button>
+            </div>
+          </div>
 
+        </form>
+      
       <AlertDialog open={showAlert} onOpenChange={setShowAlert}>
-        <AlertDialogContent className={`${isSuccess?"bg-green-400":"bg-red-400"}`}>
+        <AlertDialogContent className={`${isSuccess?"bg-green-400":"bg-red-400"}`} >
           <AlertDialogHeader>
             <AlertDialogTitle>
               {isSuccess ? "Success" : "Error"}
@@ -197,12 +170,12 @@ export function ReportForm() {
             <AlertDialogDescription>{alertMessage}</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogAction onClick={() => setShowAlert(false)}>
+            <AlertDialogAction onClick={() => setShowAlert(false)} className="" >
               OK
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </AlertDialog>
+    </div>
   );
 }
