@@ -39,7 +39,7 @@ export default function Hero() {
             <VStacks className="max-w-[400px] mx-auto gap-10 ">
 
               <div className="  rounded-lg max-w-[390px] "  >
-                  <Image src={'/images/landing/hero-qoute.svg'} alt="name-plate" width={390} height={380} className="object-cover mx-auto w-[200px]" />
+                  <Image src={'/images/landing/hero-qoute.svg'} alt="name-plate" width={390} height={380} className="object-cover mx-auto w-[200px] md:w-[390px]" />
               </div>
 
               <HStacks className="justify-center gap-5" >
