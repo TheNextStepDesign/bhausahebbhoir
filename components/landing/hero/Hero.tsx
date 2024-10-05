@@ -1,9 +1,5 @@
 import Image from "next/image";
-import LinkStack from "./LinkStack";
-import NamePlate from "./NamePlate";
-import Quote from "./Quote";
 import { Center, HStacks, Stack, VStacks } from "@/components/layouts/Stacks";
-import { H1 } from "@/components/typography/FontStyles";
 import { Button } from "@/components/ui/Button";
 import { RevolutionForm } from "./RevolutionForm";
 import Link from "next/link";
@@ -16,25 +12,26 @@ export default function Hero() {
       {/* <div className="absolute top-0 left-0 w-full  md:min-h-screen  " >
 
       </div> */}
-      
 
-        <Stack className="md:justify-between w-full " >
+        {/* new hero design */}
+
+        <Stack className="flex-col-reverse md:justify-between w-full " >
 
           {/* left side section */}
-          <div className="w-full md:w-1/2 z-10  relative min-h-[500px] md:min-h-[100vh] " >
+          <div className="w-full md:w-1/2 z-10  relative min-h-[370px] md:min-h-[100vh] " >
 
             <div className="absolute left-0 bottom-0  w-full " >
               <Image  src={"/images/landing/bhausaheb-hero.png"} alt="name-plate" className="object-cover  w-full md:w-[570px]"  width={570} height={490} />
             </div>
 
-            <div className="absolute left-0 top-0" >
+            <div className="hidden md:block absolute left-0 top-0" >
               <Image  src={"/images/icons/name-plate.svg"} className="object-cover w-[300px] md:w-[500px]" alt="name-plate " width={495} height={140} />
             </div>
 
           </div>
 
           {/* right side section */}
-          <Center className="w-full md:w-[40%] z-10 py-10  " >
+          <Center className="w-full md:w-[40%] z-10 py-10  mt-14 md:mt-0 " >
 
             <VStacks className="max-w-[400px] mx-auto gap-10 ">
 
@@ -62,9 +59,9 @@ export default function Hero() {
         </Stack>
 
 
-        {/* <div className="fixed left-2 top-2 z-20" >
+        <div className="fixed left-0 top-0 z-20" >
               <Image  src={"/images/icons/name-plate.svg"} className="object-cover w-[300px] md:w-[500px]" alt="name-plate " width={495} height={140} />
-        </div> */}
+        </div>
 
         {/* old hero design*/}
 
@@ -89,7 +86,7 @@ export default function Hero() {
         </div> */}
 
 
-        {/* new hero design */}
+        
 
 
 
